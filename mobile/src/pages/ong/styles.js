@@ -1,7 +1,8 @@
 import { StyleSheet } from 'react-native';
 import Constants from 'expo-constants'
 import { Header } from 'react-native/Libraries/NewAppScreen';
-import { preventAutoHide } from 'expo/build/launch/SplashScreen';
+import { Directions } from 'react-native-gesture-handler';
+import { block } from 'react-native-reanimated';
 
 
 export default StyleSheet.create({
@@ -25,20 +26,36 @@ export default StyleSheet.create({
     headerTextBold: {
         fontWeight: 'bold'
     },
-    title :{
-        fontSize: 30,
-        marginBottom: 16,
-        marginTop: 48,
-        color: '#13131a',
-        fontWeight:'bold'
+    information:{
+        flexDirection: 'column',
+        maxHeight: 200,
+        marginTop: 20,
+        backgroundColor: '#cccccc',
+        padding: 20,
+        borderRadius: 8,
+    
     },
-    description: {
-        fontSize: 16,
-        lineHeight: 24,
-        color: '#737380'
+    group:{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        
+    },
+
+    casos:{
+        fontSize: 25,
+        fontWeight: 'bold',
+        alignSelf: 'center',
+        marginTop: 10,
+
+        
+    },
+    item:{
+        fontSize: 15,
+        marginTop: 8,
     },
     incidentList:{
-        marginTop: 32
+        marginTop: 15,
     },
     incident: {
         padding: 24,
@@ -56,19 +73,7 @@ export default StyleSheet.create({
         marginTop: 8,
         fontSize: 15,
         marginBottom: 24,
-        color:"#737380",
-    },
-    incidentValueOng: {
-        marginTop: 8,
-        marginBottom: 14,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center'
-    },
-    incidentValueOngText: {
-        color: '#E02041',
-        fontSize: 15,
-        fontWeight: 'bold'
+        color:"#737380" 
     },
     detailsButton: {
         flexDirection: 'row',

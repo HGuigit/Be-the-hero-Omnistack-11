@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Feather } from '@expo/vector-icons';
+import { Feather, a } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { View, FlatList, Image, Text, TouchableOpacity} from 'react-native';
 
@@ -9,9 +9,7 @@ import logoImg from '../../assets/logo.png'
 import styles from './styles'
 
 
-
-export default function Incidents() {
-
+export default function Ong() {
     const[incidents, setIncidents] = useState([]);
 
     const[total, setTotal] = useState(0);
@@ -23,8 +21,8 @@ export default function Incidents() {
     function navigateToDetail(incident){
         navigation.navigate('Detail', { incident });
     }
-    function navigateToOng(incident){
-        navigation.navigate('Ong', { incident });
+    function navigateBack(){
+        navigation.goBack()
     }
  
     async function loadIncidents(){
@@ -55,18 +53,42 @@ export default function Incidents() {
         loadIncidents();  
     }, [])
 
+
     return (
         <View style={styles.container}>
             <View style={styles.header}>
                 <Image source={logoImg}/>
-                <Text style={styles.headerText}>
-                    Total de <Text style={styles.headerTextBold}>{total}</Text> casos.
-                </Text>
+                <TouchableOpacity onPress={navigateBack}>
+                    <Feather name="arrow-left" size={28} color="#E82041" />
+
+                </TouchableOpacity>
             </View>
 
+            <View style={styles.information}>
+                <View style={styles.group}>
+                    <Text style={styles.item} >Nome:</Text>
+                    <Text style={styles.item} >APAD</Text>
+                </View>
+                <View style={styles.group}>
+                    <Text style={styles.item} >Email:</Text>
+                    <Text style={styles.item} >Apad@gmail.com</Text>
+                </View>
+                <View style={styles.group}>
+                    <Text style={styles.item} >Whatsapp:</Text>
+                    <Text style={styles.item} >11963213421</Text>
+                </View>
+                <View style={styles.group}>
+                    <Text style={styles.item} >Cidade:</Text>
+                    <Text style={styles.item} >SP</Text>
+                </View>
+                <View style={styles.group}>
+                    <Text style={styles.item} >Estado</Text>
+                    <Text style={styles.item} >SP</Text>
+                </View>
+                
+            </View>
 
-            <Text style={styles.title}>Bem-vindo!</Text>
-            <Text style={styles.description}>Escolha um dos casos abaixo e salve o dia</Text>
+            <Text style={styles.casos}>Casos de APAD:</Text>
 
             <FlatList 
             data={incidents}
@@ -78,14 +100,7 @@ export default function Incidents() {
             renderItem={({ item: incident }) => (
                 <View style={styles.incident}>
                     <Text style={styles.incidentProperty}>ONG</Text>
-                    <TouchableOpacity 
-                    style={styles.incidentValueOng}
-                    onPress={() => navigateToOng(incident) }
-                    >
-                        <Text style={styles.incidentValueOngText}>{incident.name}</Text>
-                        <Feather name="arrow-right" size={16} color="red" />
-                    </TouchableOpacity>
-            
+                    <Text style={styles.incidentValue}>{incident.name}</Text>
 
                     <Text style={styles.incidentProperty}>CASO:</Text>
                     <Text style={styles.incidentValue}>{incident.title}</Text>
@@ -111,3 +126,5 @@ export default function Incidents() {
         </View>     
     )
 }
+
+
