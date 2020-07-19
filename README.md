@@ -57,9 +57,11 @@ Screenshots..!
 ## App
 
 <img src="imagens-do-projeto/inicioapp.jpg" width="320" >
-![Screenshot](imagens-do-projeto/inicio-app.jpg =960x520)
-![Screenshot](imagens-do-projeto/perfil-ong-app.jpg =960x720)
-![Screenshot](imagens-do-projeto/detalhe-caso.jpg =960x520)
+<img src="imagens-do-projeto/inicio-app.jpg" width="320" >
+<img src="imagens-do-projeto/perfil-ong-app.jpg" width="320" >
+<img src="imagens-do-projeto/detalhe-caso.jpg" width="320" >
+
+
 
 
 
