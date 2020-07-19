@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Feather, a } from '@expo/vector-icons';
-import { useNavigation } from '@react-navigation/native';
+import { Feather } from '@expo/vector-icons';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import { View, FlatList, Image, Text, TouchableOpacity} from 'react-native';
 
 import api from '../../services/api'
@@ -10,11 +10,23 @@ import styles from './styles'
 
 
 export default function Ong() {
+    const route =  useRoute()
     const[incidents, setIncidents] = useState([]);
-
     const[total, setTotal] = useState(0);
     const[page, setPage] = useState(1);
     const[loading,setLoading]= useState(false)
+
+    const onginfo = route.params.incident;
+
+    const ongid = onginfo.ong_id
+    const ongname = onginfo.name
+    const email = onginfo.email
+    const city = onginfo.city
+    const state = onginfo.uf
+    const whats = onginfo.whatsapp
+
+
+    
 
     const navigation = useNavigation()
 
@@ -24,7 +36,6 @@ export default function Ong() {
     function navigateBack(){
         navigation.goBack()
     }
- 
     async function loadIncidents(){
         if(loading){
             return;
@@ -39,7 +50,10 @@ export default function Ong() {
 
 
         const response = await api.get('incidents', {
-            params: {page}
+            params: {page},
+            headers: {
+                Authorization: ongid,
+            }
         });
 
         setIncidents([...incidents, ...response.data]);
@@ -53,6 +67,7 @@ export default function Ong() {
         loadIncidents();  
     }, [])
 
+   
 
     return (
         <View style={styles.container}>
@@ -67,28 +82,28 @@ export default function Ong() {
             <View style={styles.information}>
                 <View style={styles.group}>
                     <Text style={styles.item} >Nome:</Text>
-                    <Text style={styles.item} >APAD</Text>
+                    <Text style={styles.item} >{ongname}</Text>
                 </View>
                 <View style={styles.group}>
                     <Text style={styles.item} >Email:</Text>
-                    <Text style={styles.item} >Apad@gmail.com</Text>
+                    <Text style={styles.item} >{email}</Text>
                 </View>
                 <View style={styles.group}>
                     <Text style={styles.item} >Whatsapp:</Text>
-                    <Text style={styles.item} >11963213421</Text>
+                    <Text style={styles.item} >{whats}</Text>
                 </View>
                 <View style={styles.group}>
                     <Text style={styles.item} >Cidade:</Text>
-                    <Text style={styles.item} >SP</Text>
+                    <Text style={styles.item} >{city}</Text>
                 </View>
                 <View style={styles.group}>
                     <Text style={styles.item} >Estado</Text>
-                    <Text style={styles.item} >SP</Text>
+                    <Text style={styles.item} >{state}</Text>
                 </View>
                 
             </View>
 
-            <Text style={styles.casos}>Casos de APAD:</Text>
+            <Text style={styles.casos}>Casos de {ongname}:</Text>
 
             <FlatList 
             data={incidents}
@@ -99,8 +114,6 @@ export default function Ong() {
             onEndReachedThreshold={0.2}
             renderItem={({ item: incident }) => (
                 <View style={styles.incident}>
-                    <Text style={styles.incidentProperty}>ONG</Text>
-                    <Text style={styles.incidentValue}>{incident.name}</Text>
 
                     <Text style={styles.incidentProperty}>CASO:</Text>
                     <Text style={styles.incidentValue}>{incident.title}</Text>
@@ -110,7 +123,7 @@ export default function Ong() {
 
                     <TouchableOpacity 
                     style={styles.detailsButton}
-                    onPress={() => navigateToDetail(incident) }
+                    onPress={() => navigateToDetail(onginfo) }
                     >
                         <Text style={styles.detailsButtonText}> Ver mais detalhes </Text>
                         <Feather name="arrow-right" size={16} color="red" />
