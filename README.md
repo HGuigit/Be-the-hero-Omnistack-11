@@ -56,6 +56,10 @@ Screenshots..!
 
 ## App
 
+![Screenshot](imagens-do-projeto/inicioapp.jpg)
 ![Screenshot](imagens-do-projeto/inicio-app.jpg)
+![Screenshot](imagens-do-projeto/perfil-ong-app.jpg)
+![Screenshot](imagens-do-projeto/detalhe-caso.jpg)
+
 
 
