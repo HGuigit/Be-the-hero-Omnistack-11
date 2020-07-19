@@ -26,6 +26,32 @@ and then
 ```
 npm install
 ```
+## Running the application in dev-mode :computer:
+
+- To run the aplication you just need to do the follow:
+```
+cd backend
+```
+and
+```
+cd frontend
+```
+and then inside these folders just do:
+```
+npm start
+```
+and finally:
+```
+cd mobile
+```
+then:
+```
+expo start
+```
+This way you can just scan the expo QRCode into your cel and voa-la!
+
 
 # Be the hero :boom:
+
+
 
