@@ -28,7 +28,7 @@ npm install
 ```
 ## Running the application in dev-mode :computer:
 
-- To run the aplication you just need to do the follow:
+- To run the aplication you just need to do the following:
 ```
 cd backend
 ```
