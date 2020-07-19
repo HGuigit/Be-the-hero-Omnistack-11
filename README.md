@@ -56,10 +56,10 @@ Screenshots..!
 
 ## App
 
-![Screenshot](imagens-do-projeto/inicioapp.jpg)
-![Screenshot](imagens-do-projeto/inicio-app.jpg)
-![Screenshot](imagens-do-projeto/perfil-ong-app.jpg)
-![Screenshot](imagens-do-projeto/detalhe-caso.jpg)
+![Screenshot](imagens-do-projeto/inicioapp.jpg = 960x520)
+![Screenshot](imagens-do-projeto/inicio-app.jpg = 960x520)
+![Screenshot](imagens-do-projeto/perfil-ong-app.jpg = 960x520)
+![Screenshot](imagens-do-projeto/detalhe-caso.jpg = 960x520)
 
 
 
