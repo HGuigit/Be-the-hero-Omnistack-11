@@ -52,9 +52,9 @@ This way you can just scan the expo QRCode into your cel and voa-la!
 
 
 # Be the hero :boom:
-Screenshots..!
+Screenshots.....!!!
 
-## App
+## App :fire:
 
 <div style="display:flex;">
 <img  src="imagens-do-projeto/inicioapp.jpg" width="320" >
@@ -65,12 +65,12 @@ Screenshots..!
 <img  src="imagens-do-projeto/detalhe-caso.jpg" width="320" >
 </div>
 
-## Web
+## Web :star:
 
 <img  src="imagens-do-projeto/registro.png" >
 <img  src="imagens-do-projeto/Login.png" >
-<img src="imagens-do-projeto/profile.png" >
-<img  src="imagens-do-projeto/new_case.png"  >
+<img  src="imagens-do-projeto/profile.png">
+<img  src="imagens-do-projeto/new_case.png">
 
 
 
