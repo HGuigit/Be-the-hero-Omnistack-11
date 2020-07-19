@@ -55,14 +55,14 @@ This way you can just scan the expo QRCode into your cel and voa-la!
 Screenshots..!
 
 ## App
-<div style="display:flex; justify-content: center;">
+
+
 <img src="imagens-do-projeto/inicioapp.jpg" width="320" >
 <img src="imagens-do-projeto/inicio-app.jpg" width="320" >
-</div>
-<div style="display:flex; justify-content: center;">
+
 <img src="imagens-do-projeto/perfil-ong-app.jpg" width="320" >
 <img src="imagens-do-projeto/detalhe-caso.jpg" width="320" >
-</div>
+
 
 
 
