@@ -57,12 +57,12 @@ Screenshots..!
 ## App
 
 <div style="display:flex;">
-<img style="margin-left: 60px;" src="imagens-do-projeto/inicioapp.jpg" width="320" >
-<img style="margin-left: 60px;" src="imagens-do-projeto/inicio-app.jpg" width="320" >
+<img style="margin: 50px" src="imagens-do-projeto/inicioapp.jpg" width="320" >
+<img style="margin: 50px" src="imagens-do-projeto/inicio-app.jpg" width="320" >
 </div>
 <div style="display:flex">
-<img style="margin-left: 60px;" src="imagens-do-projeto/perfil-ong-app.jpg" width="320" >
-<img style="margin-left: 60px;" src="imagens-do-projeto/detalhe-caso.jpg" width="320" >
+<img style="margin: 50px;" src="imagens-do-projeto/perfil-ong-app.jpg" width="320" >
+<img style="margin: 50px;" src="imagens-do-projeto/detalhe-caso.jpg" width="320" >
 </div>
 
 
