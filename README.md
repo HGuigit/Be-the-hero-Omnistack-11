@@ -52,6 +52,10 @@ This way you can just scan the expo QRCode into your cel and voa-la!
 
 
 # Be the hero :boom:
+Screenshots..!
 
+## App
+
+![Screenshot](imagens-do-projeto/inicio-app.jpg)
 
 
