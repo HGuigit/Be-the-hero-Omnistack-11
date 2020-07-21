@@ -1,5 +1,5 @@
 # Project Be the Hero Omnistack 11
-"Be the hero" is an multiple platform system(mobile,web) that lets NGO's register multiple help-needed cases so that users can help and become heroes.
+"Be the hero" is a multiple platform system(mobile,web) that lets NGO's register multiple help-needed cases so that users can help and become heroes.
 
 ## Tecnologies used :zap:
 - Expo with react native for mobile
